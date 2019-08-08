@@ -56,6 +56,10 @@ class Board extends React.Component {
 
     handleClick(i){
         const squares = this.state.squares.slice();
+        // 如果已经产生了胜者或点前点击的方块已经被填过了,则终止函数
+        if (calculateWinner(squares) || squares[i]){
+            return;
+        }
         squares[i] = this.state.xIsNext ? 'X' : 'O';
         this.setState({
             squares: squares,
