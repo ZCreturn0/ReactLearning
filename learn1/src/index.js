@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const name = 'zcreturn0';
-const element = <h2>Hello {name}</h2>;
-ReactDOM.render(
-    element,
-    document.getElementById('root')
-);
+/*************      first     *****************/
+// const name = 'zcreturn0';
+// const element = <h2>Hello {name}</h2>;
+// ReactDOM.render(
+//     element,
+//     document.getElementById('root')
+// );
 
+
+/*************      定时器     *****************/
 // Date.prototype.Format = function (fmt) {
 //     var o = {
 //         "M+": this.getMonth() + 1,  // 月份 
@@ -35,8 +38,9 @@ ReactDOM.render(
 //     tick();
 // }, 1000);
 
+/*************      组件定义方式     *****************/
 // 用函数定义组件
-function welcome(props){
+function Welcome(props){
     return <h2>Welcome {props.name}</h2>
 }
 // 用 class 定义组件
@@ -45,3 +49,16 @@ class Hello extends React.Component{
         return <h2>Hello {this.props.name}</h2>;
     }
 }
+
+/*************      组件使用方式     *****************/
+// 属性会传到组件的props对象上,首字母大写
+const welcomeElement = <Welcome name="return0"></Welcome>;
+ReactDOM.render(
+    welcomeElement,
+    document.getElementById('root')
+);
+const HelloElement = <Hello name="zc"></Hello>;
+ReactDOM.render(
+    HelloElement,
+    document.getElementById('root')
+);
