@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+const name = 'zcreturn0';
+const element = <h2>Hello {name}</h2>;
 ReactDOM.render(
-    <h2>Hello World</h2>,
+    element,
     document.getElementById('root')
 );
