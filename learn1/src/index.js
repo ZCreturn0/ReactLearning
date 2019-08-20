@@ -39,6 +39,7 @@ import ReactDOM from 'react-dom';
 // }, 1000);
 
 /*************      组件定义方式     *****************/
+// 自定义组件首字母必须大写
 // 用函数定义组件
 function Welcome(props){
     return <h2>Welcome {props.name}</h2>
