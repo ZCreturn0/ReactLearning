@@ -41,25 +41,43 @@ import ReactDOM from 'react-dom';
 /*************      组件定义方式     *****************/
 // 自定义组件首字母必须大写
 // 用函数定义组件
-function Welcome(props){
-    return <h2>Welcome {props.name}</h2>
-}
-// 用 class 定义组件
-class Hello extends React.Component{
-    render(){
-        return <h2>Hello {this.props.name}</h2>;
-    }
-}
+// function Welcome(props){
+//     return <h2>Welcome {props.name}</h2>
+// }
+// // 用 class 定义组件
+// class Hello extends React.Component{
+//     render(){
+//         return <h2>Hello {this.props.name}</h2>;
+//     }
+// }
 
 /*************      组件使用方式     *****************/
 // 属性会传到组件的props对象上,首字母大写
-const welcomeElement = <Welcome name="return0"></Welcome>;
+// const welcomeElement = <Welcome name="return0"></Welcome>;
+// ReactDOM.render(
+//     welcomeElement,
+//     document.getElementById('root')
+// );
+// const HelloElement = <Hello name="zc"></Hello>;
+// ReactDOM.render(
+//     HelloElement,
+//     document.getElementById('root')
+// );
+
+/*************      组合组件     *****************/
+function Welcome(props){
+    return <h2>Welcome {props.name}</h2>;
+}
+
+function App(props){
+    return <div>
+        <Welcome name='aaaaa'></Welcome>
+        <Welcome name='bbbbb'></Welcome>
+        <Welcome name='ccccc'></Welcome>
+    </div>
+}
+
 ReactDOM.render(
-    welcomeElement,
-    document.getElementById('root')
-);
-const HelloElement = <Hello name="zc"></Hello>;
-ReactDOM.render(
-    HelloElement,
+    <App/>,
     document.getElementById('root')
 );
