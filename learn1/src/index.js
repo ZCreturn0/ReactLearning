@@ -65,6 +65,8 @@ import ReactDOM from 'react-dom';
 // );
 
 /*************      组合组件     *****************/
+
+// props 为只读属性
 function Welcome(props){
     return <h2>Welcome {props.name}</h2>;
 }
